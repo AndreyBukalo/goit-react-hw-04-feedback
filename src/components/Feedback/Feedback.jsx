@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Buttons from 'components/Controls/Controls';
 
 class Feedback extends Component {
 
@@ -52,17 +52,22 @@ class Feedback extends Component {
        const {bad } = this.state;
 
     return (
-      <div >
-        
+      <div>
+        <Buttons onGood={this.onGoodClick}
+              onNetural={this.onNeutralClick}
+            onBad={this.onBadClick}
+       />
+         {/* <button type="button" onClick={this.onGoodClick} >Good</button>
+            <button type="button" onClick={this.onNeutralClick} >Netural</button>
+             <button type="button" onClick={this.onBadClick} >Bad</button></div> */}
+          <h2>Statistics</h2>
             <span >{good}</span>
             <span >{neutral}</span>
-        <span >{bad}</span>
-        <span>Percents:{this.countPositiveFeedbackPercentage()}%</span>
+             <span >{bad}</span>
+        <span>Positve feedback:{this.countPositiveFeedbackPercentage()}%</span>
     
         <span>Total:{ this.countTotalFeedback()}</span>
-            <button type="button" onClick={this.onGoodClick} >Good</button>
-            <button type="button" onClick={this.onNeutralClick} >Netural</button>
-             <button type="button" onClick={this.onBadClick} >Bad</button>
+         
     </div>
     );
     

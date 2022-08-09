@@ -41,7 +41,6 @@ onFeedClick = key => {
         flexDirection="column"
         alignItems="flextStart"
         listStyle="none"
-        background="green"
         ml="auto"
         mr="auto"
         mt="60px"

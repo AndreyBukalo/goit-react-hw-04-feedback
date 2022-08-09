@@ -1,13 +1,13 @@
-// import React from "react";
+import React from "react";
 
 
-// const Statistics = ( {good,neutral,bad}) => {
-//     <div>
-//     <h2>Statistics</h2>
-//             <span >{good}</span>
-//             <span >{neutral}</span>
-//         <span >{bad}</span>
-//         </div>
-// }
+export const Statistics = ({ good, neutral, bad, positivePercentage,total }) => {
+  return <div>
+        <p >Good:{good}</p>
+        <p >Neutral:{neutral}</p>
+      <p >Bad:{bad}</p>
+      <p>Total:{total}</p>
+        <p>Positive :{positivePercentage}%</p>
+    </div>
+};
 
-// export default Statistics;

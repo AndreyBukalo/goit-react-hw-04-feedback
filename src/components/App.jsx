@@ -23,9 +23,8 @@ onFeedClick = key => {
   }
 
   countTotalFeedback = () => { 
-    const totalFeeds = this.state.good + this.state.bad + this.state.neutral;
+    const totalFeeds = Object.values(this.state).reduce((acc, feed) => acc + feed, 0);
     return totalFeeds;
-    
     };
 
   countPositiveFeedbackPercentage = () => {

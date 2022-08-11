@@ -15,6 +15,7 @@ export class App extends Component {
     bad: 0
   };
 
+
 onFeedClick = key => {
     this.setState(prevState => ({
       [key]: prevState[key] + 1,
@@ -34,16 +35,15 @@ onFeedClick = key => {
 
   render() {
     const { good, neutral, bad } = this.state;
-    
+
     return (
       <Box width={320}
         display="flex"
         flexDirection="column"
         alignItems="flextStart"
         listStyle="none"
-        ml="auto"
-        mr="auto"
-        mt="60px"
+        mr="20"
+        mt="20px"
         p="0">
       <Section Section title='Please leave feedback'>
          <FeedbackOptions options={ Object.keys(this.state)} onFeedClick={this.onFeedClick}></FeedbackOptions>
@@ -56,7 +56,7 @@ onFeedClick = key => {
               bad={bad}
               positivePercentage={this.countPositiveFeedbackPercentage()}
               total={this.countTotalFeedback()}></Statistics>) : (
-            <Notification message='No feedback :(' />)}
+            <Notification message='No feedback ' />)}
          </Section >
 </Box>
  
@@ -64,3 +64,5 @@ onFeedClick = key => {
     
   }
 }
+
+

@@ -17,5 +17,9 @@ background-color:white;
 outline:none;
 border:1px solid gainsboro;
 border-radius:10px;
+cursor: pointer;
+:hover {
+    background-color:gainsboro;
+}
     
 `
